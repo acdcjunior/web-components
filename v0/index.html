@@ -21,6 +21,10 @@
 
 <hr>
 
+For more details, have a look at the source codes.
+
+<hr>
+
 <h1><code>basic-bucket-es5</code>: minimal Web Components <code>v0</code> example using <code>ES5</code></h1>
 
 <p>The <code>basic-bucket-es5</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES5</code>. It
@@ -89,6 +93,26 @@ This is a <code>basic-bucket-ts</code> (check the console for outputs):
     }
 </script>
 <button onclick="basicBucketTypeScriptButton()">Click me and check the console</button>
+
+
+
+
+
+<hr>
+
+<h1><code>my-blinking-text-box</code>: example of Web Components <code>v0</code> extending a (browser) native <code>input</code> component</h1>
+
+<p>The <code>my-blinking-text-box</code> component is a demo implementation using web components <code>v0</code> and <code>ES2015</code> that
+    showcases how can you extend a (browser) native <code>input</code> component. The main difference (from others that don't extend browser components) is that you have to extend
+    a different prototype, define the <code>extends</code> property and <strong>you must use <code>is="my-tag-name"</code> instead of <code>&lt;my-tag-name&gt;</code></strong>.</p>
+
+<link rel="import" href="input-extender-es2015.html">
+<div class="initial">
+    <p>Correctly declared <code>my-blinking-text-box</code> element (works, type on it): <input is="my-blinking-text-box" blink-color="yellow"></p>
+    <p>Incorrectly declared <code>my-blinking-text-box</code> element (nothing appears): <my-blinking-text-box blink-color="yellow"></my-blinking-text-box></p>
+</div>
+
+
 
 </body>
 </html>
