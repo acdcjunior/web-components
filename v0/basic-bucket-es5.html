@@ -10,7 +10,7 @@
         console.log('basic-bucket-es5: createdCallback() of basic-bucket-es5');
 
         var _bucketSpan = document.createElement('span');
-        _bucketSpan.innerHTML = 'bucketSpan initial';
+        _bucketSpan.innerHTML = 'bucketSpan/ES5 initial';
         this.appendChild(_bucketSpan);
         this._bucketSpan = _bucketSpan;
     };
@@ -33,7 +33,7 @@
         },
         set: function (newContent) {
             console.log('basic-bucket-es5: Setting bucket to \"' + newContent + '"!');
-            this._bucketSpan.innerHTML = 'bucketSpan ' + newContent;
+            this._bucketSpan.innerHTML = 'bucketSpan/ES5 ' + newContent;
         }
     });
 

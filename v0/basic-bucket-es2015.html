@@ -16,7 +16,7 @@
             console.log('basic-bucket-es2015: createdCallback() of basic-bucket-es2015');
 
             let _bucketSpan = document.createElement('span');
-            _bucketSpan.innerHTML = 'bucketSpan initial';
+            _bucketSpan.innerHTML = 'bucketSpan/ES2015 initial';
             this.appendChild(_bucketSpan);
             this._bucketSpan = _bucketSpan;
         }
@@ -40,7 +40,7 @@
         }
         set bucket(newContent) {
             console.log('basic-bucket-es2015: Setting bucket to \"' + newContent + '"!');
-            this._bucketSpan.innerHTML = 'bucketSpan ' + newContent;
+            this._bucketSpan.innerHTML = 'bucketSpan/ES2015 ' + newContent;
         }
 
         blink() {
