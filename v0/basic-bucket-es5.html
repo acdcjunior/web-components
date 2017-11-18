@@ -37,6 +37,11 @@
         }
     });
 
+    BasicBucketES5Proto.blink = function () {
+        // example of custom method
+        this._bucketSpan.style = "color: " + this.getAttribute("blink-color");
+    };
+
     document.registerElement('basic-bucket-es5', {
         // extends: 'other-element', // use when extending another component, but the prototype must be based on it as well, and must use "is"
         // observedAttributes: ['observedAttributeOne', 'observedAttributeTwo'], // when omitted, it observes all attributes
