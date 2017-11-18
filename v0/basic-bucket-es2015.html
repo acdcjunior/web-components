@@ -45,8 +45,8 @@
 
         blink() {
             // example of custom method
-            this._bucketSpan.style = "color: " + this.getAttribute("blink-color");
-        };
+            this._bucketSpan.style.color = this.getAttribute("blink-color");
+        }
     }
 
     document.registerElement('basic-bucket-es2015', BasicBucketES2015);
