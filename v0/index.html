@@ -15,7 +15,7 @@
 
 <hr>
 
-<h1><code>basic-bucket-es5</code>: minimal <code>v0</code> example using <code>ES5</code></h1>
+<h1><code>basic-bucket-es5</code>: minimal Web Components <code>v0</code> example using <code>ES5</code></h1>
 
 <p>The <code>basic-bucket-es5</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES5</code>. It
     doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how <code>ES5</code> could be used.
@@ -25,23 +25,26 @@ For examples of the other capabilities of <code>v0</code>, see the other compone
 <link rel="import" href="basic-bucket-es5.html">
 This is a <code>basic-bucket-es5</code> (check the console for outputs):
 <div class="initial">
-    <basic-bucket-es5 id="my-basic-bucket-es5" blink-color="blue">[INNER]</basic-bucket-es5>
+    <basic-bucket-es5 id="my-basic-bucket-es5" blink-color="orange">[INNER]</basic-bucket-es5>
 </div>
 <script>
     function basicBucketEs5Button() {
         document.getElementById('my-basic-bucket-es5').setAttribute('attribute-via-js', 'new-attr-value');
-        document.getElementById('my-basic-bucket-es5').bucket = 'new stuff';
+        document.getElementById('my-basic-bucket-es5').bucket = 'new stuff ES5';
         document.getElementById('my-basic-bucket-es5').blink();
     }
 </script>
 <button onclick="basicBucketEs5Button()">Click me and check the console</button>
 
+
+
+
 <hr>
 
-<h1><code>basic-bucket-es2015</code>: minimal <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
+<h1><code>basic-bucket-es2015</code>: minimal Web Components <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
 
 <p>The <code>basic-bucket-es2015</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES2015</code> (<code>ES6</code>). It
-    doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic using <code>ES5</code>.</p>
+    doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic done using <code>ES2015</code>.</p>
 
 <link rel="import" href="basic-bucket-es2015.html">
 This is a <code>basic-bucket-es2015</code> (check the console for outputs):
@@ -51,11 +54,35 @@ This is a <code>basic-bucket-es2015</code> (check the console for outputs):
 <script>
     function basicBucketEs2015Button() {
         document.getElementById('my-basic-bucket-es2015').setAttribute('attribute-via-js', 'new-attr-value');
-        document.getElementById('my-basic-bucket-es2015').bucket = 'new stuff';
+        document.getElementById('my-basic-bucket-es2015').bucket = 'new stuff ES2015 (ES6)';
         document.getElementById('my-basic-bucket-es2015').blink();
     }
 </script>
 <button onclick="basicBucketEs2015Button()">Click me and check the console</button>
+
+
+
+
+<hr>
+
+<h1><code>basic-bucket-ts</code>: minimal Web Components <code>v0</code> example using <code>TypeScript</code></h1>
+
+<p>The <code>basic-bucket-ts</code> component is a basic demo implementation using web components <code>v0</code> and <code>TypeScript</code>. It
+    doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic done using <code>TypeScript</code>.</p>
+
+<link rel="import" href="basic-bucket-ts/basic-bucket-ts.html">
+This is a <code>basic-bucket-ts</code> (check the console for outputs):
+<div class="initial">
+    <basic-bucket-ts id="my-basic-bucket-ts" blink-color="blue">[INNER]</basic-bucket-ts>
+</div>
+<script>
+    function basicBucketTypeScriptButton() {
+        document.getElementById('my-basic-bucket-ts').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-basic-bucket-ts').bucket = 'new stuff TypeScript';
+        document.getElementById('my-basic-bucket-ts').blink();
+    }
+</script>
+<button onclick="basicBucketTypeScriptButton()">Click me and check the console</button>
 
 
 </body>
