@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Components v0</title>
+    <style>
+        .initial {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <h1>Web Components v0 Demos</h1>
@@ -18,18 +24,39 @@ For examples of the other capabilities of <code>v0</code>, see the other compone
 
 <link rel="import" href="basic-bucket-es5.html">
 This is a <code>basic-bucket-es5</code> (check the console for outputs):
-<div style="color: red">
+<div class="initial">
     <basic-bucket-es5 id="my-basic-bucket-es5" blink-color="blue">[INNER]</basic-bucket-es5>
 </div>
 <script>
     function basicBucketEs5Button() {
         document.getElementById('my-basic-bucket-es5').setAttribute('attribute-via-js', 'new-attr-value');
         document.getElementById('my-basic-bucket-es5').bucket = 'new stuff';
+        document.getElementById('my-basic-bucket-es5').blink();
     }
 </script>
 <button onclick="basicBucketEs5Button()">Click me and check the console</button>
 
 <hr>
+
+<h1><code>basic-bucket-es2015</code>: minimal <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
+
+<p>The <code>basic-bucket-es2015</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES2015</code> (<code>ES6</code>). It
+    doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic using <code>ES5</code>.</p>
+
+<link rel="import" href="basic-bucket-es2015.html">
+This is a <code>basic-bucket-es2015</code> (check the console for outputs):
+<div class="initial">
+    <basic-bucket-es2015 id="my-basic-bucket-es2015" blink-color="green">[INNER]</basic-bucket-es2015>
+</div>
+<script>
+    function basicBucketEs2015Button() {
+        document.getElementById('my-basic-bucket-es2015').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-basic-bucket-es2015').bucket = 'new stuff';
+        document.getElementById('my-basic-bucket-es2015').blink();
+    }
+</script>
+<button onclick="basicBucketEs2015Button()">Click me and check the console</button>
+
 
 </body>
 </html>
