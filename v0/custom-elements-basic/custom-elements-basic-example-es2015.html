@@ -8,6 +8,11 @@
         // use when extending another component, but the class must extend it as well, and must use "is"
         // static get extends() { return 'other-element'; }
 
+        constructor() {
+            super();
+            // Custom Elements v0 don't call the constructor!
+        }
+
         createdCallback() {
             // called when the element is registered.
             console.log('custom-elements-basic-example-es2015: createdCallback() of custom-elements-basic-example-es2015');

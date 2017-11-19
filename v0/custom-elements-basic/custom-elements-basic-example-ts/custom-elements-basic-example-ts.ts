@@ -6,6 +6,11 @@ class BasicExampleTypeScript extends HTMLElement {
 
     _bucketSpan: HTMLSpanElement;
 
+    constructor() {
+        super();
+        // Custom Elements v0 don't call the constructor!
+    }
+
     createdCallback() {
         // called when the element is registered.
         console.log('custom-elements-basic-example-ts: createdCallback() of custom-elements-basic-example-ts');
