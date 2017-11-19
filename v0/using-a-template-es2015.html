@@ -1,0 +1,47 @@
+<template id="template-text">
+    This is a template. The code here is not executed, parsed or inserted into the DOM.
+    So, this <img src="i-dont-exist.png"> will not throw an error (only when you, using JavaScript, clones
+    this template and intentionally appends it to the DOM -- see below, clicking the "CLICK ME" button will do this).
+
+    Similarly, this <script>console.log('code inside template');</script> won't run right away - nothing
+    inside templates does. To execute it, you must, again, clone it and append it to the DOM.
+</template>
+
+<template id="template-button">
+    Here's the template button: <button id="click-me-button">CLICK ME</button>
+</template>
+
+<script>
+    const currentDocument = document.currentScript.ownerDocument;
+
+    class UsingTemplate extends HTMLElement {
+        createdCallback() {
+            // get the template from this document
+            let templateButton = currentDocument.querySelector('#template-button');
+            // clone it (deep cloning)
+            let clone = document.importNode(templateButton.content, true);
+            // append to this component
+            this.appendChild(clone);
+
+            // 'this' below is the current component
+            const thisComponent = this;
+
+            // we are selecting the button we just appended
+            let clickMeButton = thisComponent.querySelector("#click-me-button");
+
+            clickMeButton.addEventListener('click', function () {
+                let templateText = currentDocument.querySelector("#template-text");
+                let clonedTemplateText = document.importNode(templateText.content, true);
+
+                let newDiv = document.createElement('div');
+                newDiv.appendChild(clonedTemplateText);
+
+                // at this point, the <script> tag within <template id="template-text"> will execute, and the <img> will try to load as well (which will yield a 404-not found error, of course)
+                thisComponent.appendChild(newDiv);
+            });
+        }
+    }
+
+    document.registerElement('using-a-template', UsingTemplate);
+
+</script>

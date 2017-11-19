@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Web Components v0</title>
     <style>
-        .initial {
+        .red-bold {
             color: red;
             font-weight: bold;
         }
@@ -34,7 +34,7 @@ For examples of the other capabilities of <code>v0</code>, see the other compone
 
 <link rel="import" href="basic/basic-bucket-es5.html">
 This is a <code>basic-bucket-es5</code> (check the console for outputs):
-<div class="initial">
+<div class="red-bold">
     <basic-bucket-es5 id="my-basic-bucket-es5" blink-color="orange">[INNER]</basic-bucket-es5>
 </div>
 <script>
@@ -58,7 +58,7 @@ This is a <code>basic-bucket-es5</code> (check the console for outputs):
 
 <link rel="import" href="basic/basic-bucket-es2015.html">
 This is a <code>basic-bucket-es2015</code> (check the console for outputs):
-<div class="initial">
+<div class="red-bold">
     <basic-bucket-es2015 id="my-basic-bucket-es2015" blink-color="green">[INNER]</basic-bucket-es2015>
 </div>
 <script>
@@ -82,7 +82,7 @@ This is a <code>basic-bucket-es2015</code> (check the console for outputs):
 
 <link rel="import" href="basic/basic-bucket-ts/basic-bucket-ts.html">
 This is a <code>basic-bucket-ts</code> (check the console for outputs):
-<div class="initial">
+<div class="red-bold">
     <basic-bucket-ts id="my-basic-bucket-ts" blink-color="blue">[INNER]</basic-bucket-ts>
 </div>
 <script>
@@ -107,9 +107,25 @@ This is a <code>basic-bucket-ts</code> (check the console for outputs):
     a different prototype, define the <code>extends</code> property and <strong>you must use <code>is="my-tag-name"</code> instead of <code>&lt;my-tag-name&gt;</code></strong>.</p>
 
 <link rel="import" href="input-extender-es2015.html">
-<div class="initial">
+<div class="red-bold">
     <p>Correctly declared <code>my-blinking-text-box</code> element (works, type on it): <input is="my-blinking-text-box" blink-color="yellow"></p>
     <p>Incorrectly declared <code>my-blinking-text-box</code> element (nothing appears): <my-blinking-text-box blink-color="yellow"></my-blinking-text-box></p>
+</div>
+
+
+
+
+
+<hr>
+
+<h1><code>using-a-template</code>: example of Web Components <code>v0</code> cloning and using a <code>template</code> tag</h1>
+
+<p>The <code>using-a-template</code> component is a demo implementation using web components <code>v0</code> and <code>ES2015</code> that
+    showcases how can you query, clone and append a <code>template</code> element.</p>
+
+<link rel="import" href="using-a-template-es2015.html">
+<div class="red-bold">
+    <p>Here: <using-a-template blink-color="yellow"></using-a-template></p>
 </div>
 
 
