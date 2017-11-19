@@ -21,7 +21,7 @@ class BasicExampleTypeScript extends HTMLElement {
         console.log('custom-elements-basic-example-ts: detachedCallback() of custom-elements-basic-example-ts');
     }
     attributeChangedCallback(attr, oldValue, newValue) {
-        // called when an (observed) attribute is added, changed or removed
+        // called when an attribute is added, changed or removed
         console.log('custom-elements-basic-example-ts: attributeChangedCallback() of custom-elements-basic-example-ts', attr, oldValue, newValue);
     }
     get bucket() {

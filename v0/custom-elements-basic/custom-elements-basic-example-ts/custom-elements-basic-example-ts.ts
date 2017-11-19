@@ -31,7 +31,7 @@ class BasicExampleTypeScript extends HTMLElement {
     }
 
     attributeChangedCallback(attr: string, oldValue: any, newValue: any) {
-        // called when an (observed) attribute is added, changed or removed
+        // called when an attribute is added, changed or removed
         console.log('custom-elements-basic-example-ts: attributeChangedCallback() of custom-elements-basic-example-ts', attr, oldValue, newValue);
     }
 
