@@ -25,23 +25,23 @@ For more details, have a look at the source codes.
 
 <hr>
 
-<h1><code>basic-bucket-es5</code>: minimal Web Components <code>v0</code> example using <code>ES5</code></h1>
+<h1><code>basic-example-es5</code>: minimal Web Components <code>v0</code> example using <code>ES5</code></h1>
 
-<p>The <code>basic-bucket-es5</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES5</code>. It
+<p>The <code>basic-example-es5</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES5</code>. It
     doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how <code>ES5</code> could be used.
 For examples of the other capabilities of <code>v0</code>, see the other components implemented using <code>ES2015</code> (which require
     less boilerplate, but could be backported to <code>ES5</code>).</p>
 
-<link rel="import" href="basic/basic-bucket-es5.html">
-This is a <code>basic-bucket-es5</code> (check the console for outputs):
+<link rel="import" href="basic/basic-example-es5.html">
+This is a <code>basic-example-es5</code> (check the console for outputs):
 <div class="red-bold">
-    <basic-bucket-es5 id="my-basic-bucket-es5" blink-color="orange">[INNER]</basic-bucket-es5>
+    <basic-example-es5 id="my-basic-example-es5" blink-color="orange">[INNER]</basic-example-es5>
 </div>
 <script>
     function basicBucketEs5Button() {
-        document.getElementById('my-basic-bucket-es5').setAttribute('attribute-via-js', 'new-attr-value');
-        document.getElementById('my-basic-bucket-es5').bucket = 'new stuff ES5';
-        document.getElementById('my-basic-bucket-es5').blink();
+        document.getElementById('my-basic-example-es5').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-basic-example-es5').bucket = 'new stuff ES5';
+        document.getElementById('my-basic-example-es5').blink();
     }
 </script>
 <button onclick="basicBucketEs5Button()">Click me and check the console</button>
@@ -51,21 +51,21 @@ This is a <code>basic-bucket-es5</code> (check the console for outputs):
 
 <hr>
 
-<h1><code>basic-bucket-es2015</code>: minimal Web Components <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
+<h1><code>basic-example-es2015</code>: minimal Web Components <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
 
-<p>The <code>basic-bucket-es2015</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES2015</code> (<code>ES6</code>). It
+<p>The <code>basic-example-es2015</code> component is a basic demo implementation using web components <code>v0</code> and <code>ES2015</code> (<code>ES6</code>). It
     doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic done using <code>ES2015</code>.</p>
 
-<link rel="import" href="basic/basic-bucket-es2015.html">
-This is a <code>basic-bucket-es2015</code> (check the console for outputs):
+<link rel="import" href="basic/basic-example-es2015.html">
+This is a <code>basic-example-es2015</code> (check the console for outputs):
 <div class="red-bold">
-    <basic-bucket-es2015 id="my-basic-bucket-es2015" blink-color="green">[INNER]</basic-bucket-es2015>
+    <basic-example-es2015 id="my-basic-example-es2015" blink-color="green">[INNER]</basic-example-es2015>
 </div>
 <script>
     function basicBucketEs2015Button() {
-        document.getElementById('my-basic-bucket-es2015').setAttribute('attribute-via-js', 'new-attr-value');
-        document.getElementById('my-basic-bucket-es2015').bucket = 'new stuff ES2015 (ES6)';
-        document.getElementById('my-basic-bucket-es2015').blink();
+        document.getElementById('my-basic-example-es2015').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-basic-example-es2015').bucket = 'new stuff ES2015 (ES6)';
+        document.getElementById('my-basic-example-es2015').blink();
     }
 </script>
 <button onclick="basicBucketEs2015Button()">Click me and check the console</button>
@@ -75,21 +75,21 @@ This is a <code>basic-bucket-es2015</code> (check the console for outputs):
 
 <hr>
 
-<h1><code>basic-bucket-ts</code>: minimal Web Components <code>v0</code> example using <code>TypeScript</code></h1>
+<h1><code>basic-example-ts</code>: minimal Web Components <code>v0</code> example using <code>TypeScript</code></h1>
 
-<p>The <code>basic-bucket-ts</code> component is a basic demo implementation using web components <code>v0</code> and <code>TypeScript</code>. It
+<p>The <code>basic-example-ts</code> component is a basic demo implementation using web components <code>v0</code> and <code>TypeScript</code>. It
     doesn't display all <code>v0</code> capabilities, it is a minimal implementation just to show how to get the basic done using <code>TypeScript</code>.</p>
 
-<link rel="import" href="basic/basic-bucket-ts/basic-bucket-ts.html">
-This is a <code>basic-bucket-ts</code> (check the console for outputs):
+<link rel="import" href="basic/basic-example-ts/basic-example-ts.html">
+This is a <code>basic-example-ts</code> (check the console for outputs):
 <div class="red-bold">
-    <basic-bucket-ts id="my-basic-bucket-ts" blink-color="blue">[INNER]</basic-bucket-ts>
+    <basic-example-ts id="my-basic-example-ts" blink-color="blue">[INNER]</basic-example-ts>
 </div>
 <script>
     function basicBucketTypeScriptButton() {
-        document.getElementById('my-basic-bucket-ts').setAttribute('attribute-via-js', 'new-attr-value');
-        document.getElementById('my-basic-bucket-ts').bucket = 'new stuff TypeScript';
-        document.getElementById('my-basic-bucket-ts').blink();
+        document.getElementById('my-basic-example-ts').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-basic-example-ts').bucket = 'new stuff TypeScript';
+        document.getElementById('my-basic-example-ts').blink();
     }
 </script>
 <button onclick="basicBucketTypeScriptButton()">Click me and check the console</button>
