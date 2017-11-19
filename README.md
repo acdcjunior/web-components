@@ -11,3 +11,4 @@ The [Web Components **`v0`** example implementations](v0/index.html) folder show
 - `template-example`: example of Web Components `v0` cloning and using a `template` tag
 - `shadow-dom-example`: example of Web Components `v0` using the `Shadow DOM`
 - `insert-using-js`: example of Custom Element `v0` inserted programmatically
+- `html-import-example`: example of nested `HTML Import`s and load/error event callback functions

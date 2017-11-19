@@ -1,0 +1,7 @@
+<script>
+    function handleLoad(event) { console.log('[html-import-example] Completed loading HTML Import', event.target.href)}
+    function handleError(event) { console.log('[html-import-example] Error loading HTML Import', event.target.href)}
+</script>
+
+<link rel="import" href="imported-html.html" onload="handleLoad(event)" onerror="handleError(event)">
+<link rel="import" href="_____THIS-HTTP-404-IS-INTENTIONAL____.html" onload="handleLoad(event)" onerror="handleError(event)">
