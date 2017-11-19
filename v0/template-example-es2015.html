@@ -22,25 +22,25 @@
 </template>
 
 <script>
-    const currentDocument = document.currentScript.ownerDocument;
-
     class UsingTemplate extends HTMLElement {
         createdCallback() {
-            // get the template from this document
-            let templateButton = currentDocument.querySelector('#template-button');
-            // clone it (deep cloning)
-            let clone = document.importNode(templateButton.content, true);
-            // append to this component
-            this.appendChild(clone);
-
-            // 'this' below is the current component
+            // 'this' below is the current component, we will add the children element to it
             const thisComponent = this;
 
-            // we are selecting the button we just appended
+
+            // get the template from this document
+            let templateButton = UsingTemplate.sourceDocument.querySelector('#template-button');
+            // clone it (deep cloning)
+            let clone = document.importNode(templateButton.content, true);
+
+            // append to this component
+            thisComponent.appendChild(clone);
+
+            // we are selecting the button inside the template we just appended
             let clickMeButton = thisComponent.querySelector("#click-me-button");
 
             clickMeButton.addEventListener('click', function () {
-                let templateText = currentDocument.querySelector("#template-text");
+                let templateText = UsingTemplate.sourceDocument.querySelector("#template-text");
                 let clonedTemplateText = document.importNode(templateText.content, true);
 
                 let newDiv = document.createElement('div');
@@ -51,6 +51,7 @@
             });
         }
     }
+    UsingTemplate.sourceDocument = document.currentScript.ownerDocument; // memorizing the "document" object this script tag (and the above <template>s) belong to
 
     document.registerElement('template-example', UsingTemplate);
 
