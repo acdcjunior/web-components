@@ -8,4 +8,4 @@ The [Web Components **`v0`** example implementations](v0/index.html) folder show
 - <code>basic-bucket-es2015</code>: minimal Web Components <code>v0</code> example using <code>ES2015</code> (<code>ES6</code>)
 - <code>basic-bucket-ts</code>: minimal Web Components <code>v0</code> example using <code>TypeScript</code>
 - <code>my-blinking-text-box</code>: example of Web Components <code>v0</code> extending a (browser) native <code>input</code> component
-- <code>using-a-template</code>: example of Web Components <code>v0</code> cloning and using a <code>template</code> tag
+- <code>template-example</code>: example of Web Components <code>v0</code> cloning and using a <code>template</code> tag

@@ -5,6 +5,16 @@
 
     Similarly, this <script>console.log('code inside template');</script> won't run right away - nothing
     inside templates does. To execute it, you must, again, clone it and append it to the DOM.
+
+    <style>
+        button {
+            color: blue;
+            padding: 15px;
+            border-radius: 50%;
+        }
+        /* this style will only have effect when added to the DOM and, if added directly to the DOM, will
+         affect every <button>! (If added to the Shadow DOM of a component, will only affect that component.) */
+    </style>
 </template>
 
 <template id="template-button">
@@ -42,6 +52,6 @@
         }
     }
 
-    document.registerElement('using-a-template', UsingTemplate);
+    document.registerElement('template-example', UsingTemplate);
 
 </script>
