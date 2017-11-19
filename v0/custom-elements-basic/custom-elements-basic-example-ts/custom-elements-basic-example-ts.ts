@@ -12,7 +12,7 @@ class BasicExampleTypeScript extends HTMLElement {
     }
 
     createdCallback() {
-        // called when the element is registered.
+        // called when the element is created (instantiated).
         console.log('custom-elements-basic-example-ts: createdCallback() of custom-elements-basic-example-ts');
 
         let _bucketSpan = document.createElement('span');

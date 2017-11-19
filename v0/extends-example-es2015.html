@@ -14,7 +14,7 @@
         static get extends() { return 'input' ; }
 
         createdCallback() {
-            // called when the element is registered.
+            // called when the element is created (instantiated).
             this._blinkColor = this.getAttribute("blink-color") || "yellow";
             this.style.backgroundColor = this._blinkColor;
             this.addEventListener('keypress', function() {

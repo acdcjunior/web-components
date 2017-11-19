@@ -6,7 +6,7 @@
     var BasicExampleES5Proto = Object.create(HTMLElement.prototype);
 
     BasicExampleES5Proto.createdCallback = function () {
-        // called when the element is registered.
+        // called when the element is created (instantiated).
         console.log('custom-elements-basic-example-es5: createdCallback() of custom-elements-basic-example-es5');
 
         var _bucketSpan = document.createElement('span');
