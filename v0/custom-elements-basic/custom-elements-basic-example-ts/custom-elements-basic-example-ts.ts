@@ -1,11 +1,8 @@
 
 class BasicExampleTypeScript extends HTMLElement {
 
-    // use when extending another component, but the class must extend it as well, and must use "is"
-    // static get extends() { return extends: 'other-element' ; }
-
-    // when omitted, it observes all attributes
-    // static get observedAttributes() { return ['observedAttributeOne', 'observedAttributeTwo']; }
+    // use when extending another component, but the prototype must be based on it as well (must use "is" when the parent is a native element)
+    // static get extends() { return 'other-element'; }
 
     _bucketSpan: HTMLSpanElement;
 
@@ -47,4 +44,10 @@ class BasicExampleTypeScript extends HTMLElement {
     }
 }
 
-(<any>document).registerElement('custom-elements-basic-example-ts', BasicExampleTypeScript);
+/*
+ To use this element we can:
+ - <custom-elements-basic-example-ts><custom-elements-basic-example-ts>
+ - <div is="custom-elements-basic-example-ts"></div>
+ - document.body.appendChild(new BasicExampleTypeScriptElement());
+ */
+(<any>window).BasicExampleTypeScriptElement = (<any>document).registerElement('custom-elements-basic-example-ts', BasicExampleTypeScript);

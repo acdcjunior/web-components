@@ -42,9 +42,14 @@
         this._bucketSpan.style.color = this.getAttribute("blink-color");
     };
 
-    document.registerElement('custom-elements-basic-example-es5', {
-        // extends: 'other-element', // use when extending another component, but the prototype must be based on it as well, and must use "is"
-        // observedAttributes: ['observedAttributeOne', 'observedAttributeTwo'], // when omitted, it observes all attributes
+    /*
+    To use this element we can:
+    - <custom-elements-basic-example-es5><custom-elements-basic-example-es5>
+    - <div is="custom-elements-basic-example-es5"></div>
+    - document.body.appendChild(new BasicExampleES5Element());
+     */
+    BasicExampleES5Element = document.registerElement('custom-elements-basic-example-es5', {
+        // extends: 'other-element', // use when extending another component, but the prototype must be based on it as well (must use "is" when the parent is a native element)
         prototype: BasicExampleES5Proto
     });
 

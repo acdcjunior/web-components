@@ -32,4 +32,10 @@ class BasicExampleTypeScript extends HTMLElement {
         this._bucketSpan.style.color = this.getAttribute("blink-color");
     }
 }
-document.registerElement('custom-elements-basic-example-ts', BasicExampleTypeScript);
+/*
+ To use this element we can:
+ - <custom-elements-basic-example-ts><custom-elements-basic-example-ts>
+ - <div is="custom-elements-basic-example-ts"></div>
+ - document.body.appendChild(new BasicExampleTypeScriptElement());
+ */
+window.BasicExampleTypeScriptElement = document.registerElement('custom-elements-basic-example-ts', BasicExampleTypeScript);

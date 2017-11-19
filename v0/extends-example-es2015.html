@@ -9,12 +9,9 @@
      * must use the "is" attribute.
      * So, usage is: <input is="extends-example"> instead of <extends-example></extends-example>.
      */
-    class MyBlinkingTextBox extends HTMLInputElement {
-        // use when extending another component, but the class must extend it as well, and must use "is"
+    class ExtendsExample extends HTMLInputElement {
+        // use when extending another component, but the prototype must be based on it as well (must use "is" when the parent is a native element)
         static get extends() { return 'input' ; }
-
-        // when omitted, it observes all attributes
-        // static get observedAttributes() { return ['observedAttributeOne', 'observedAttributeTwo']; }
 
         createdCallback() {
             // called when the element is registered.
@@ -27,9 +24,18 @@
 
         attachedCallback() { /* called when the element is added to the DOM; not used in this demo */ }
         detachedCallback() { /* called when the element is removed from the DOM; not used in this demo */ }
-        attributeChangedCallback(attr,oldAttr,newAttr) { /* called when an (observed) attribute is added, changed or removed; not used in this demo */ }
+        attributeChangedCallback(attr,oldVal,newVal) { /* called when an (observed) attribute is added, changed or removed; not used in this demo */ }
     }
 
-    document.registerElement('extends-example', MyBlinkingTextBox);
+    /*
+    To use this element we can ONLY USE:
+    - <div is="extends-example"></div>
+    - document.body.appendChild(new ExtendsExampleElement());
+
+    We CANNOT USE
+    - <extends-example><extends-example>
+    ...because our component is extending a browser native element.
+     */
+    ExtendsExampleElement = document.registerElement('extends-example', ExtendsExample);
 
 </script>
