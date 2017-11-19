@@ -148,5 +148,38 @@ This is a <code>custom-elements-basic-example-ts</code> (check the console for o
 
 
 
+
+
+
+<hr>
+
+<h1><code>insert-using-js</code>: example of Custom Element <code>v0</code> inserted programmatically</h1>
+
+<p>The <code>insert-using-js</code> component is a demo implementation using web components <code>v0</code> and <code>ES2015</code> that
+    showcases how can you insert a Custom Element v0 programmatically.</p>
+
+<link rel="import" href="insert-using-js-es2015.html">
+<div class="red-bold">
+    <p><button onclick="createCustomElement()">createCustomElement: Click me and check the console</button></p>
+    <p><button onclick="attachCustomElement()">attachCustomElement: Click me and check the console</button></p>
+    <p><button onclick="detachCustomElement()">detachCustomElement: Click me and check the console</button></p>
+    <p id="insert-using-js-p"></p>
+</div>
+<script>
+    let myCustomElement;
+    function createCustomElement() {
+        myCustomElement = new InsertCustomElementUsingJSElement();
+    }
+    function attachCustomElement() {
+        document.querySelector('#insert-using-js-p').appendChild(myCustomElement);
+    }
+    function detachCustomElement() {
+        document.querySelector('#insert-using-js-p').removeChild(myCustomElement);
+    }
+</script>
+
+
+
+
 </body>
 </html>
