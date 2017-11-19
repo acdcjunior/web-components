@@ -7,7 +7,7 @@
     /**
      * Since it extends the browser native element <input>, to use this component, you
      * must use the "is" attribute.
-     * So, usage is: <input is="my-blinking-text-box"> instead of <my-blinking-text-box></my-blinking-text-box>.
+     * So, usage is: <input is="extends-example"> instead of <extends-example></extends-example>.
      */
     class MyBlinkingTextBox extends HTMLInputElement {
         // use when extending another component, but the class must extend it as well, and must use "is"
@@ -30,6 +30,6 @@
         attributeChangedCallback(attr,oldAttr,newAttr) { /* called when an (observed) attribute is added, changed or removed; not used in this demo */ }
     }
 
-    document.registerElement('my-blinking-text-box', MyBlinkingTextBox);
+    document.registerElement('extends-example', MyBlinkingTextBox);
 
 </script>
