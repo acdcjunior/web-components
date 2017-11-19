@@ -1,0 +1,59 @@
+<template id="shadow-dom-template-text">
+    This is a template...
+
+    <style>
+        button {
+            background-color: orange;
+            border: 3px dashed red;
+        }
+        /* this style will only have effect when added to the DOM and, if added directly to the DOM, will
+         affect every <button>! (If added to the Shadow DOM of a component, will only affect that component.) */
+    </style>
+</template>
+
+<template id="shadow-dom-template-button">
+    Here's the template button: <button id="shadow-dom-button">CLICK ME</button>
+</template>
+
+<script>
+    class ShadowDomExample extends HTMLElement {
+        createdCallback() {
+            // 'this' below is the current component
+            const thisComponent = this;
+
+            // now, instead of appending the children elements to the 'thisComponent', we create a Shadow DOM and append them to it, instead
+            let thisShadowDom = thisComponent.createShadowRoot();
+
+
+            // get the template from this document
+            let templateButton = ShadowDomExample.sourceDocument.querySelector('#shadow-dom-template-button');
+            // clone it (deep cloning)
+            let clone = document.importNode(templateButton.content, true);
+
+
+            // append to this component
+            // since we are appending to the Shadow DOM, the <button> will not be affected by global styles (unless they contain "/deep/" or "::shadow")
+            thisShadowDom.appendChild(clone);
+
+
+            // we are selecting the button inside the template we just appended
+            let clickMeButton = thisShadowDom.querySelector("#shadow-dom-button");
+
+            clickMeButton.addEventListener('click', function () {
+                let templateText = ShadowDomExample.sourceDocument.querySelector("#shadow-dom-template-text");
+                let clonedTemplateText = document.importNode(templateText.content, true);
+
+                let newDiv = document.createElement('div');
+                newDiv.appendChild(clonedTemplateText);
+
+                // at this point the <style> declared at #shadow-dom-template-text will take effect, but since it
+                // is in the Shadow DOM, it will only be applied this component (and style the #shadow-dom-button, not all buttons)
+                thisShadowDom.appendChild(newDiv);
+            });
+        }
+    }
+    ShadowDomExample.sourceDocument = document.currentScript.ownerDocument; // memorizing the "document" object this script tag (and the above <template>s) belong to
+
+    document.registerElement('shadow-dom-example', ShadowDomExample);
+
+</script>

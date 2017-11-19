@@ -9,3 +9,4 @@ The [Web Components **`v0`** example implementations](v0/index.html) folder show
 - <code>basic-bucket-ts</code>: minimal Web Components <code>v0</code> example using <code>TypeScript</code>
 - <code>extends-example</code>: example of Web Components <code>v0</code> extending a (browser) native <code>input</code> component
 - <code>template-example</code>: example of Web Components <code>v0</code> cloning and using a <code>template</code> tag
+- <code>shadow-dom-example</code>: example of Web Components <code>v0</code> using the <code>Shadow DOM</code>
