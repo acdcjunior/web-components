@@ -33,7 +33,7 @@
     - document.body.appendChild(new ExtendsExampleElement());
 
     We CANNOT USE
-    - <extends-example><extends-example>
+    - <extends-example></extends-example>
     ...because our component is extending a browser native element.
      */
     ExtendsExampleElement = document.registerElement('extends-example', ExtendsExample);

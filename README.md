@@ -25,7 +25,7 @@ The [Web Components **`v1`** example implementations](v1/index.html) folder show
 # From v0 to v1
 
 - Custom Elements v1 are not compatible with ES5-style classes.
- [There are polyfills](https://github.com/webcomponents/custom-elements#es5-vs-es2015) and workarounds, but they don't work seamlessly and at best and have many limitations.
+ [There are polyfills](https://github.com/webcomponents/custom-elements#es5-vs-es2015) and workarounds, but they don't work seamlessly (may not actually use the native implementation, just the polyfilled one) and at best and have many limitations.
 - HTML Imports are dead. They are being replaced by ES6 Modules, which already have some browser support. 
 
 ## Custom Elements

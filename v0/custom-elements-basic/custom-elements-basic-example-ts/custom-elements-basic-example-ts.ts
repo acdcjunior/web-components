@@ -51,7 +51,7 @@ class BasicExampleTypeScript extends HTMLElement {
 
 /*
  To use this element we can:
- - <custom-elements-basic-example-ts><custom-elements-basic-example-ts>
+ - <custom-elements-basic-example-ts></custom-elements-basic-example-ts>
  - <div is="custom-elements-basic-example-ts"></div>
  - document.body.appendChild(new BasicExampleTypeScriptElement());
  */

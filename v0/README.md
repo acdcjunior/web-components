@@ -1,4 +1,4 @@
-# (MAYBE) TODO
+# Possible TODOs/Improvements
 
 - Basic example using `is="my-component"` (right now we have one in the `extends` example, because there's no alternative there)
 - CSS
