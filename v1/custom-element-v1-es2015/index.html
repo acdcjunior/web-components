@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>custom-element-v1-es2015</title>
+</head>
+<body>
+
+<h1><code>custom-element-v1-es2015</code>: minimal Custom Element <code>v1</code> example using <code>ES2015</code> (<code>ES6</code>)</h1>
+
+<p>The <code>custom-element-v1-es2015</code> component is a basic demo implementation using (web components) custom elements <code>v1</code> and <code>ES2015</code> (<code>ES6</code>). It
+    doesn't display all <code>v1</code> capabilities, it is a minimal implementation just to show how to get the basic done using <code>ES2015</code>.</p>
+
+<script type="module" src="custom-element-v1-es2015.js"></script>
+This is a <code>custom-element-v1-es2015</code> (check the console for outputs):
+<div class="red-bold">
+    <custom-element-v1-es2015 id="my-custom-element-v1-es2015" blink-color="green" attribute-via-js="declared-value">[INNER]</custom-element-v1-es2015>
+</div>
+<script>
+    function myCustomElementV1Es2015() {
+        document.getElementById('my-custom-element-v1-es2015').setAttribute('attribute-via-js', 'new-attr-value');
+        document.getElementById('my-custom-element-v1-es2015').bucket = 'new stuff [v1] ES2015 (ES6)';
+        document.getElementById('my-custom-element-v1-es2015').blink();
+    }
+</script>
+<button onclick="myCustomElementV1Es2015()">Click me and check the console</button>
+
+<hr>
+Possible declaration styles:
+  <div>1: <custom-element-v1-es2015></custom-element-v1-es2015></div>
+  <div>2: (<code>is=""</code> doesn't work with v1 elements that don't extend built-in elements) <div is="custom-element-v1-es2015"></div></div>
+  <div>3: <span id="created-via-get"></span></div>
+  <div>4:  <span id="created-via-createElement"></span></div>
+  <script>
+    // to use .get() we have to use .whenDefined() because ES6 Modules are deferred (only executed after the document whole has been parsed)
+    customElements.whenDefined('custom-element-v1-es2015').then(() => {
+        let CustomElementV1ES2015Class = customElements.get('custom-element-v1-es2015');
+        document.getElementById('created-via-get').appendChild(new CustomElementV1ES2015Class());
+    });
+
+    document.getElementById('created-via-createElement').appendChild(document.createElement('custom-element-v1-es2015'));
+  </script>
+
+</body>
+</html>
