@@ -19,7 +19,8 @@ The [Web Components **`v0`** example implementations](v0/index.html) folder show
 
 The [Web Components **`v1`** example implementations](v1/index.html) folder shows:
 
-- `custom-element-v1-es2015`: minimal Custom Element <code>v1</code> example using <code>ECMAScript 2015</code> (<code>ES6</code>)
+- `custom-element-v1-es2015`: minimal Custom Element `v1` example using `ECMAScript 2015` (`ES6`)
+- `shadow-dom-v1-example`: example of Web Components `v1` using the `Shadow DOM`
 
 
 # From v0 to v1
@@ -58,3 +59,5 @@ The first consequence is the `.html` file will become a `.js` that will be loade
 | -  | `adoptedCallback()` |
 | - | `customElements.whenDefined()` |
 | `ElmtClass = document.registerElement(...)` | `ElmtClass = customElements.get('tag')` |
+| | |
+| `.createShadowRoot()` | `.attachShadow({mode: 'open'});` |
