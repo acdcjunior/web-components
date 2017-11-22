@@ -26,7 +26,21 @@ The [Web Components **`v1`** example implementations](v1/index.html) folder show
 
 - Custom Elements v1 are not compatible with ES5-style classes.
  [There are polyfills](https://github.com/webcomponents/custom-elements#es5-vs-es2015) and workarounds, but they don't work seamlessly (may not actually use the native implementation, just the polyfilled one) and at best and have many limitations.
-- HTML Imports are dead. They are being replaced by ES6 Modules, which already have some browser support. 
+- HTML Imports are dead. They are being replaced by ES6 Modules, which already have some browser support.
+
+# Single file Components
+
+A common way to implement was to declare the custom element's HTML (`<template>`) and JavaScript code (`<script>`) in a single
+HTML file and import it whenever needed.
+
+But now that HTML Imports are deprecated, this approach can no longer be used. What happens and what are the alternatives?
+
+The first consequence is the `.html` file will become a `.js` that will be loaded as a ES6 Module. How to load the template?
+
+- Have the template as a string in the `.js` file;
+- Load the template via Ajax;
+- Add a build step (with webpack, gulp, etc.) and inline the HTML file;
+- Wait for the browsers and see what they will come up with.
 
 ## Custom Elements
 
